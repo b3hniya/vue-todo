@@ -1,28 +1,38 @@
+@mixin text
+  color: $secondary-dark
+  font-family: $fonts !important
+    
 h1
+    @include text
     font-size: 44px
     line-height: 58px
     margin: 0 0 48px 0
 h2
+    @include text
     font-size: 40px
     font-weight: 900
     line-height: 52px
     margin: 0 0 32px 0
 h3
+    @include text
     font-size: 36px
     font-weight: 900
     line-height: 46px
     margin: 0 0 32px 0
 h4
+    @include text
     font-size: 32px
     font-weight: 900
     line-height: 42px
     margin: 0 0 24px 0
 h5
+    @include text
     font-size: 28px
     font-weight: 900
     line-height: 36px
     margin: 0 0 24px 0
 h6
+    @include text
     font-size: 24px
     font-weight: 900
     line-height: 30px
@@ -30,33 +40,43 @@ h6
 
     
 .title
+    @include text
 
 .subtitle
     opacity: 0.6
     font-size: 14px
     font-weight: 400
     color: $main-dark
+    font-family: $fonts
 
 
 .text-lg
+    @include text
     font-size: 18px
 .text-md
+    @include text
     font-size: 16px
 .text-sm
+    @include text
     font-size: 14px
 .text-xs
+    @include text
     font-size: 12px
 
 
 .text-btn-lg
+    @include text
     @extend .text-lg
     font-weight: bold
 .text-btn-md
+    @include text
     @extend .text-md
     font-weight: bold
 .text-btn-sm
+    @include text
     @extend .text-sm
     font-weight: bold
 .text-btn-xs
+    @include text
     @extend .text-xs
     font-weight: bold
