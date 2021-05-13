@@ -34,10 +34,10 @@ export default {
   methods: {
     buttonClassBinder() {
       let cls = "";
-      
-      cls += this.buttonClassWrapper(cls); 
 
-      cls += this.buttonAnimClassWrapper(cls)
+      cls += this.buttonClassWrapper(cls);
+
+      cls += this.buttonAnimClassWrapper(cls);
 
       return cls;
     },
@@ -45,37 +45,30 @@ export default {
     routeClassBinder() {
       let cls = "";
 
-      cls += this.routeClassWrapper(cls)
+      cls += this.routeClassWrapper(cls);
 
       return cls;
     },
 
-    routeClassWrapper(cls){
+    routeClassWrapper(cls) {
       if (this.icon) cls += "icon";
       else cls += " text";
-      
-      return cls; 
+
+      return cls;
     },
 
-
     buttonClassWrapper(cls) {
-      if (this.icon) this.text = false;
-
       if (this.icon) cls += " icon-btn";
       else cls += " text-btn";
 
-      return cls; 
+      return cls;
     },
 
-    buttonAnimClassWrapper(cls){
-      
-      if (this.ghost) cls += " ghost btn-hover";
-      if (this.icon & !this.ghost) cls += " icon-btn-hover";
-      if (this.text && !this.icon && !this.ghost) cls += " btn-hover";
-
-      return cls; 
+    buttonAnimClassWrapper() {
+      if (this.ghost) return " ghost btn-hover";
+      if (this.icon) return " icon-btn-hover";
+      if (this.text) return " btn-hover";
     },
-
   },
 
   inheritAttrs: false,
@@ -83,6 +76,11 @@ export default {
 </script>
 
 <style lang="sass">
+button
+    margin: 0
+    padding: 0
+    border: none
+
 .btn-hover
   @include main-hover-anim //from _animation.sass file
 
