@@ -141,6 +141,7 @@ button
   height: 48px
 
 .icon-btn-hover //special hover effect for icon buttons
+  background-color: transparent
   &:hover
     background-color: $primary
     .icon
