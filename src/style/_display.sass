@@ -1,0 +1,25 @@
+@mixin centerize
+    @extend .display-flex
+    align-items: center
+    justify-content: center
+    
+.display-flex
+    display: flex
+
+.row
+    @extend .display-flex
+    flex-direction: row
+
+.column
+    @extend .display-flex
+    flex-direction: column
+
+
+.justify-between
+    justify-content: space-between
+
+.justify-around
+    justify-content: space-around
+
+.justify-evenly
+    justify-content: space-evenly
