@@ -1,5 +1,5 @@
 <template>
-  <ul id="button-group" :class="classBinder()">
+  <ul class="button-group" :class="classBinder()">
     <slot></slot>
   </ul>
 </template>
@@ -36,6 +36,12 @@ export default {
 </script>
 
 <style lang="sass">
+.button-group
+  margin: 0
+  padding: 0
+  li
+    list-style-type: none
+
 .vertical
   @extend .column
 
