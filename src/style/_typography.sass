@@ -1,4 +1,5 @@
 @mixin text
+  text-decoration: none
   color: $secondary-dark
   font-family: $fonts !important
     
@@ -50,33 +51,29 @@ h6
     font-family: $fonts
 
 
-.text-lg
+.text-xl //option for text size itself
+    @include text
+    font-size: 24px
+.text-lg //option for text size itself
     @include text
     font-size: 18px
-.text-md
+.text-md //option for text size itself
     @include text
     font-size: 16px
-.text-sm
+.text-sm //option for text size itself
     @include text
     font-size: 14px
-.text-xs
+.text-xs //option for text size itself
     @include text
     font-size: 12px
 
 
-.text-btn-lg
-    @include text
-    @extend .text-lg
-    font-weight: bold
-.text-btn-md
-    @include text
-    @extend .text-md
-    font-weight: bold
-.text-btn-sm
-    @include text
-    @extend .text-sm
-    font-weight: bold
-.text-btn-xs
-    @include text
-    @extend .text-xs
-    font-weight: bold
+.icon-sm //option for icon size itself
+  width: 16px
+  height: 16px
+.icon-md //option for icon size itself
+  width: 24px
+  height: 24px
+.icon-lg //option for icon size itself
+  width: 32px
+  height: 32px
