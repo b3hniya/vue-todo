@@ -1,28 +1,39 @@
+@mixin text
+  text-decoration: none
+  color: $secondary-dark
+  font-family: $fonts !important
+    
 h1
+    @include text
     font-size: 44px
     line-height: 58px
     margin: 0 0 48px 0
 h2
+    @include text
     font-size: 40px
     font-weight: 900
     line-height: 52px
     margin: 0 0 32px 0
 h3
+    @include text
     font-size: 36px
     font-weight: 900
     line-height: 46px
     margin: 0 0 32px 0
 h4
+    @include text
     font-size: 32px
     font-weight: 900
     line-height: 42px
     margin: 0 0 24px 0
 h5
+    @include text
     font-size: 28px
     font-weight: 900
     line-height: 36px
     margin: 0 0 24px 0
 h6
+    @include text
     font-size: 24px
     font-weight: 900
     line-height: 30px
@@ -30,33 +41,39 @@ h6
 
     
 .title
+    @include text
 
 .subtitle
     opacity: 0.6
     font-size: 14px
     font-weight: 400
     color: $main-dark
+    font-family: $fonts
 
 
-.text-lg
+.text-xl //option for text size itself
+    @include text
+    font-size: 24px
+.text-lg //option for text size itself
+    @include text
     font-size: 18px
-.text-md
+.text-md //option for text size itself
+    @include text
     font-size: 16px
-.text-sm
+.text-sm //option for text size itself
+    @include text
     font-size: 14px
-.text-xs
+.text-xs //option for text size itself
+    @include text
     font-size: 12px
 
 
-.text-btn-lg
-    @extend .text-lg
-    font-weight: bold
-.text-btn-md
-    @extend .text-md
-    font-weight: bold
-.text-btn-sm
-    @extend .text-sm
-    font-weight: bold
-.text-btn-xs
-    @extend .text-xs
-    font-weight: bold
+.icon-sm //option for icon size itself
+  width: 16px
+  height: 16px
+.icon-md //option for icon size itself
+  width: 24px
+  height: 24px
+.icon-lg //option for icon size itself
+  width: 32px
+  height: 32px
