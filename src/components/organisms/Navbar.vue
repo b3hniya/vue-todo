@@ -2,24 +2,24 @@
   <div class="navbar">
     <list-item>
       <item class="py-4">
-        <mdicon name="vuejs" />
+        <mdicon name="check" class="logo-color" />
       </item>
 
       <button-group vertical>
-        <btn icon class="my-1">
-          <mdicon name="vuejs" />
-        </btn>
-        <btn icon class="my-1">
-          <mdicon name="vuejs" />
-        </btn>
-        <btn icon class="my-1">
-          <mdicon name="vuejs" />
+        <btn
+          icon
+          class="my-1"
+          v-for="(item, index) in items"
+          :key="index"
+          :route="item.route"
+        >
+          <mdicon :name="item.icon" />
         </btn>
       </button-group>
 
       <item class="my-4">
         <btn icon>
-          <mdicon name="vuejs" />
+          <mdicon name="theme-light-dark" />
         </btn>
       </item>
     </list-item>
@@ -27,10 +27,21 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    items: [
+      { icon: "view-dashboard-outline", route: "/" },
+      { icon: "checkbox-marked-circle-outline", route: "/todos" },
+      { icon: "tag-multiple-outline", route: "tags" },
+    ],
+  }),
+};
 </script>
 
 <style lang="sass">
+.logo-color
+  color: $primary
+
 .navbar
     width: 64px
     height: 100vh
