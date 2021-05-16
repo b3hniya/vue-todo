@@ -52,6 +52,7 @@ export default {
 
 .navbar
     width: 64px
+    z-index: 1
     height: 100vh
     background-color: $secondary-light
     .list-item
