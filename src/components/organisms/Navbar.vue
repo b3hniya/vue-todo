@@ -45,7 +45,7 @@ export default {
         route: "/todos",
         tooltip: "Todos",
       },
-      { icon: "tag-multiple-outline", route: "tags", tooltip: "Tags" },
+      { icon: "tag-multiple-outline", route: "/tags", tooltip: "Tags" },
     ],
   }),
 
