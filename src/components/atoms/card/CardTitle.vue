@@ -8,7 +8,7 @@ export default {};
 
 <style lang="sass">
 .card-title
-    @extend h4
+    @extend h6
     margin: 0 0 8px 0
     text-transform: capitalize
 </style>
