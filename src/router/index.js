@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Dashboard from "../pages/Dashboard.vue";
 import Todos from "../pages/Todos.vue";
+import Tags from "../pages/Tags.vue"
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ const routes = [
     name: "Todos",
     component: Todos,
   },
+  {
+    path: "/tags",
+    name: 'Tags',
+    component: Tags
+  }
 ];
 
 const router = new VueRouter({
