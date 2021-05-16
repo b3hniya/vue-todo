@@ -8,7 +8,12 @@
       <button-group vertical>
         <tooltip v-for="(item, index) in items" :key="index">
           <template v-slot:activator>
-            <btn icon class="my-1" :route="item.route">
+            <btn
+              icon
+              class="my-1"
+              :route="item.route"
+              :active="isActive(item.route)"
+            >
               <mdicon :name="item.icon" />
             </btn>
           </template>
@@ -43,6 +48,12 @@ export default {
       { icon: "tag-multiple-outline", route: "tags", tooltip: "Tags" },
     ],
   }),
+
+  methods: {
+    isActive(route) {
+      return route === this.$route.path;
+    },
+  },
 };
 </script>
 

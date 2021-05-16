@@ -29,6 +29,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   methods: {
@@ -38,6 +42,8 @@ export default {
       cls += this.buttonClassWrapper(cls);
 
       cls += this.buttonAnimClassWrapper(cls);
+
+      cls += this.isbuttonActive();
 
       return cls;
     },
@@ -68,6 +74,11 @@ export default {
       if (this.ghost) return " ghost btn-hover";
       if (this.icon) return " icon-btn-hover";
       if (this.text) return " btn-hover";
+    },
+
+    isbuttonActive() {
+      if (this.active) return " nav-active";
+      return "";
     },
   },
 
@@ -145,5 +156,10 @@ button
   &:hover
     background-color: $primary
     .icon
+      color: $main-light
+
+.nav-active
+  background-color: $primary
+  .icon
       color: $main-light
 </style>
