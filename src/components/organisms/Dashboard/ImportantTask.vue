@@ -45,7 +45,6 @@ export default {};
 .important-tasks
   display: flex
   flex-wrap: wrap
-  @include response-to-size
   justify-content: space-around
   @include important-tasks-cards
   @media only screen and (max-width: $md)

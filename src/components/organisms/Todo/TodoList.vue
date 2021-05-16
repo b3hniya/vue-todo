@@ -1,6 +1,6 @@
 <template>
   <div class="recently-wrapper">
-    <component-title> Recently added </component-title>
+    <component-title> Todos </component-title>
 
     <div class="recently-tasks">
       <card class="" v-for="(i, index) in 5" :key="index">

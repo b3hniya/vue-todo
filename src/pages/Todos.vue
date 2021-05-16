@@ -1,15 +1,29 @@
 <template>
   <div class="dashboard" v-on:scroll="updateScroll">
-    <appbar :scrollPosition="scrollPosition">Dashboard</appbar>
+    <appbar :scrollPosition="scrollPosition">To-Do</appbar>
 
-    <important-task class="response-to-side" />
+    <new-todo class="new-todo-card" />
 
-    <recently-task class="response-to-side" />
+    <todo-list class="response-to-side" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    scrollPosition: 0,
+  }),
+
+  methods: {
+    updateScroll(e) {
+      this.scrollPosition = e.srcElement.scrollTop;
+    },
+  },
+};
 </script>
 
-<style></style>
+<style lang="sass">
+.new-todo-card
+    margin-top: 64 + 128px
+    @include response-to-size
+</style>
