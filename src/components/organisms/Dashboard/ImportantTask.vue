@@ -39,7 +39,7 @@ export default {};
 
 .important-tasks-wrapper
   margin-top: 128 + 64px
-  @include response-to-size
+
 
 
 .important-tasks

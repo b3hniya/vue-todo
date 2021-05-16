@@ -12,7 +12,6 @@
         </card-item>
       </card>
     </div>
-    
   </div>
 </template>
 
@@ -23,7 +22,6 @@ export default {};
 <style lang="sass">
 .recently-wrapper
   margin-top: 64px
-  @include response-to-size
 
 
 
