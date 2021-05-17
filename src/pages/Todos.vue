@@ -4,7 +4,7 @@
 
     <new-todo class="new-todo-card" />
 
-    <todo-list class="response-to-side" />
+    <todo-list class="" />
   </div>
 </template>
 
@@ -26,4 +26,7 @@ export default {
 .new-todo-card
     margin-top: 64 + 128px
     @include response-to-size
+
+.todo-list-wrapper
+  @include response-to-size
 </style>

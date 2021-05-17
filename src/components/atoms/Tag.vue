@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .tag
     border-radius: 50%
     background-color: $primary

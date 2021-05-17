@@ -8,7 +8,7 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .item
     list-style-type: none
 </style>

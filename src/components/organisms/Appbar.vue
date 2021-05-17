@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .page-title
   z-index: 0
   width: 100%

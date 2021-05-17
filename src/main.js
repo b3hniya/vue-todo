@@ -7,7 +7,6 @@ import * as mdijs from "@mdi/js";
 const files = require.context("./components", true, /\.vue$/i);
 
 files.keys().map((key) => {
-  console.log(key);
   Vue.component(
     files(key).default.name ??
       key

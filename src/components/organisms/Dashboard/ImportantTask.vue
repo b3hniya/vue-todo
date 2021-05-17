@@ -2,7 +2,7 @@
   <div class="important-tasks-wrapper">
     <component-title> Important task </component-title>
     <div class="important-tasks">
-      <card class="pa-2 mx-2 my-2" v-for="(i, index) in 3" :key="index">
+      <card v-for="(i, index) in 3" :key="index">
         <card-item space_between>
           <card-title>
             test1
@@ -26,10 +26,10 @@ export default {};
 <style lang="sass" scoped>
 @mixin important-tasks-cards
   .card
+    @extend .ma-2
+    @extend .pa-2
     max-width: 256 + 128px
     max-height: 256 + 128px
-    .card-title
-      font-weight: 400
     .card-text
       margin-top: 4px
       text-align: justify

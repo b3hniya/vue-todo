@@ -8,7 +8,7 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .list-item
   margin: 0
   padding: 0

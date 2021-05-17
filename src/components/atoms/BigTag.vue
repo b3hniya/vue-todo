@@ -1,5 +1,5 @@
 <template>
-  <p class="text-lg big-tag">
+  <p class="big-tag">
     <slot />
     <mdicon name="close" v-if="close" />
     <mdicon name="plus" v-else />
@@ -17,11 +17,12 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .big-tag
-    @extend .px-2
-    @extend .py-1
     @extend .row
+    @extend .py-1
+    @extend .px-2
+    @extend .text-lg
     border-radius: 50px
     @extend .justify-between
     background-color: $primary

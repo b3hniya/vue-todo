@@ -13,7 +13,7 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .card-item-todo
     height: 100%
     align-items: center
