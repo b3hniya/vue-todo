@@ -1,10 +1,12 @@
 <template>
-  <div class="dashboard" v-on:scroll="updateScroll">
+  <div class="page" v-on:scroll="updateScroll">
     <appbar :scrollPosition="scrollPosition">Dashboard</appbar>
 
-    <important-task class="response-to-side" />
+    <div class="dashboard">
+      <important-task />
 
-    <recently-task class="response-to-side" />
+      <recently-task />
+    </div>
   </div>
 </template>
 
@@ -22,13 +24,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
-.response-to-side
-  @include response-to-size
-
+<style lang="sass" scoped>
 .dashboard
-  height: 100vh
-  width: 100vw
-  @extend .column
-  overflow-x: hidden
+  @include response-to-size
 </style>

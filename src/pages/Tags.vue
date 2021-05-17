@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard" v-on:scroll="updateScroll">
+  <div class="page" v-on:scroll="updateScroll">
     <appbar :scrollPosition="scrollPosition">Tags</appbar>
 
     <div class="tags">
@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .tags
   @extend .row
   flex-wrap: wrap
