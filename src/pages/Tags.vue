@@ -3,7 +3,12 @@
     <appbar :scrollPosition="scrollPosition">Tags</appbar>
 
     <div class="tags row">
-      <big-tag v-for="(tag, index) in tags" :key="index" close>
+      <big-tag
+        v-for="(tag, index) in tags"
+        :key="index"
+        close
+        :color="tag.color"
+      >
         {{ tag.name }}
       </big-tag>
       <big-tag> add new tag </big-tag>
