@@ -3,13 +3,17 @@
     <appbar :scrollPosition="scrollPosition">Tags</appbar>
 
     <div class="tags row">
-      <big-tag v-for="(i, index) in 10" :key="index" close> test-tag </big-tag>
+      <big-tag v-for="(tag, index) in tags" :key="index" close>
+        {{ tag.name }}
+      </big-tag>
       <big-tag> add new tag </big-tag>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   data: () => ({
     scrollPosition: 0,
@@ -19,6 +23,10 @@ export default {
     updateScroll(e) {
       this.scrollPosition = e.srcElement.scrollTop;
     },
+  },
+
+  computed: {
+    ...mapState(["tags"]),
   },
 };
 </script>
