@@ -3,9 +3,9 @@
     <appbar :scrollPosition="scrollPosition">Dashboard</appbar>
 
     <div class="dashboard">
-      <important-task />
+      <important-todos />
 
-      <recently-task />
+      <recently-todos />
     </div>
   </div>
 </template>
