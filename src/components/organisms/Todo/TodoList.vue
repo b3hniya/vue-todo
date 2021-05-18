@@ -8,7 +8,7 @@
           <card-title>
             {{ todo.name }}
           </card-title>
-          <tag />
+          <tag :color="todo.tag.color" />
         </card-item>
       </card>
     </div>

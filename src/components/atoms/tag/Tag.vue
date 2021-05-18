@@ -30,13 +30,17 @@ export default {
       if (this.size === "sm") return " tag-sm";
       if (this.size === "md") return " tag-md";
       if (this.size === "lg") return " tag-lg";
+
+      return "";
     },
 
     adjustColor() {
       if (this.color === "blue") return " background-blue";
       if (this.color === "purple") return " background-purple";
       if (this.color === "orange") return " background-orange";
-      if (this.color === "red") return " background-red";
+      if (this.color === "primary") return " background-primary";
+
+      return "";
     },
   },
 };

@@ -16,7 +16,7 @@ export default {
 
     color: {
       type: String,
-      default: "blue",
+      default: "primary",
     },
   },
 
@@ -33,7 +33,9 @@ export default {
       if (this.color === "blue") return " background-blue";
       if (this.color === "purple") return " background-purple";
       if (this.color === "orange") return " background-orange";
-      if (this.color === "red") return " background-red";
+      if (this.color === "primary") return " background-primary";
+
+      return ''
     },
   },
 };

@@ -2,15 +2,15 @@
   <div class="important-tasks-wrapper">
     <component-title> Important todos </component-title>
     <div class="important-tasks">
-      <card v-for="(task, index) in importantTasks" :key="index">
+      <card v-for="(todo, index) in importantTodo" :key="index">
         <card-item space_between>
           <card-title>
-            {{ task.name }}
+            {{ todo.name }}
           </card-title>
-          <tag />
+          <tag :color="todo.tag.color" />
         </card-item>
         <card-text>
-          {{ task.description }}
+          {{ todo.description }}
         </card-text>
       </card>
     </div>
@@ -21,7 +21,7 @@
 import { mapGetters } from "vuex";
 
 export default {
-  computed: mapGetters({ importantTasks: "getImportantTodos" }),
+  computed: mapGetters({ importantTodo: "getImportantTodos" }),
 };
 </script>
 

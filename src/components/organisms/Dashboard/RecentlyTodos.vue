@@ -3,12 +3,16 @@
     <component-title> Recently added </component-title>
 
     <div class="recently-tasks">
-      <card class="my-2 row" v-for="(todo, index) in recentlyTodos" :key="index">
+      <card
+        class="my-2 row"
+        v-for="(todo, index) in recentlyTodos"
+        :key="index"
+      >
         <card-item space_between class="mx-2">
           <card-title>
             {{ todo.name }}
           </card-title>
-          <tag />
+          <tag :color="todo.tag.color" />
         </card-item>
       </card>
     </div>
