@@ -1,8 +1,8 @@
 <template>
-  <div class="dashboard" v-on:scroll="updateScroll">
+  <div class="page" v-on:scroll="updateScroll">
     <appbar :scrollPosition="scrollPosition">Tags</appbar>
 
-    <div class="tags">
+    <div class="tags row">
       <big-tag v-for="(i, index) in 10" :key="index" close> test-tag </big-tag>
       <big-tag> add new tag </big-tag>
     </div>
@@ -23,12 +23,11 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .tags
-  @extend .row
   flex-wrap: wrap
-  @include response-to-size
   margin-top: 128 + 64px
+  @include response-to-size
   .big-tag
     @extend .mx-2
 </style>

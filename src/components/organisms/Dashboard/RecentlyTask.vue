@@ -3,8 +3,8 @@
     <component-title> Recently added </component-title>
 
     <div class="recently-tasks">
-      <card class="" v-for="(i, index) in 5" :key="index">
-        <card-item space_between>
+      <card class="my-2 row" v-for="(i, index) in 5" :key="index">
+        <card-item space_between class="mx-2">
           <card-title>
             test1
           </card-title>
@@ -19,22 +19,17 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .recently-wrapper
   margin-top: 64px
 
-
-
-.recently-tasks
-  .card
-    min-width: 128px
-    max-width: 100%
-    padding-bottom: 0
-    @extend .pa-2
-    @extend .my-3
-    .card-title
-      font-size: 20px
-      font-weight: 400
-    .card-item
-      align-items: center
+.card
+  max-width: 100%
+  min-width: 128px
+  .card-title
+    margin: 0
+    font-size: 18px
+  .card-item
+    width: 100%
+    align-items: center
 </style>

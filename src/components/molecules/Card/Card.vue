@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-      <slot> </slot>
+    <slot> </slot>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .card
     min-width: 128px
     max-width: 512px
@@ -17,10 +17,4 @@ export default {};
     border-radius: 8px
     box-shadow: 2px 2px 4px gray
     background-color: $secondary-light
-    .card-title
-      @extend .mx-2
-      @extend .my-1
-    .card-text
-      @extend .mx-2
-
 </style>

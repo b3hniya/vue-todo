@@ -1,10 +1,10 @@
 <template>
-  <div class="dashboard" v-on:scroll="updateScroll">
+  <div class="page" v-on:scroll="updateScroll">
     <appbar :scrollPosition="scrollPosition">To-Do</appbar>
 
     <new-todo class="new-todo-card" />
 
-    <todo-list class="response-to-side" />
+    <todo-list class="" />
   </div>
 </template>
 
@@ -22,8 +22,11 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .new-todo-card
     margin-top: 64 + 128px
     @include response-to-size
+
+.todo-list-wrapper
+  @include response-to-size
 </style>

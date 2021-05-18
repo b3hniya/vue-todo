@@ -6,9 +6,9 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .card-title
     @extend h6
-    margin: 0 0 8px 0
+    font-weight: 400
     text-transform: capitalize
 </style>

@@ -35,7 +35,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .button-group
   margin: 0
   padding: 0

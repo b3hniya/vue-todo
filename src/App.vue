@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <navbar id="nav"/>  
+    <navbar id="nav" />
     <router-view id="view" />
   </div>
 </template>
+
 <style lang="sass">
 #nav
   position: fixed

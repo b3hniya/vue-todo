@@ -8,7 +8,7 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .component-title
   @extend h3
   font-weight: 700
