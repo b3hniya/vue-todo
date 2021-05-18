@@ -106,7 +106,17 @@ export default new Vuex.Store({
       return state.todos.filter((el, index) => index < 5);
     },
   },
-  mutations: {},
-  actions: {},
+
+  mutations: {
+    ADD_NEW_TAG(state, tag) {
+      state.tags.splice(0, 0, tag);
+    },
+  },
+
+  actions: {
+    DISPATCH_ADDING_NEW_TAG({ commit }, tag) {
+      commit("ADD_NEW_TAG", tag);
+    },
+  },
   modules: {},
 });

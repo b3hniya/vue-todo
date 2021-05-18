@@ -1,5 +1,7 @@
 <template>
-  <div class="tag" :class="classBinder()"></div>
+  <div class="tag" :class="classBinder()" v-on="$listeners" v-bind="$attrs">
+    <slot />
+  </div>
 </template>
 
 <script>

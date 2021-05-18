@@ -8,10 +8,13 @@
         :key="index"
         close
         :color="tag.color"
+        class="ma-2"
       >
         {{ tag.name }}
       </big-tag>
-      <big-tag> add new tag </big-tag>
+      <big-tag class="ma-2" @click="test()"> add new tag </big-tag>
+
+      <add-tags @close="close()" :acti="clicked" />
     </div>
   </div>
 </template>
@@ -22,11 +25,19 @@ import { mapState } from "vuex";
 export default {
   data: () => ({
     scrollPosition: 0,
+    clicked: false,
   }),
 
   methods: {
     updateScroll(e) {
       this.scrollPosition = e.srcElement.scrollTop;
+    },
+    test() {
+      this.clicked = !this.clicked;
+    },
+
+    close() {
+      this.clicked = false;
     },
   },
 
