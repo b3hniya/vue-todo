@@ -1,9 +1,11 @@
 <template>
-  <p class="big-tag" :class="classBinder()">
+  <div class="big-tag" :class="classBinder()">
     <slot />
-    <mdicon name="close" v-if="close" />
-    <mdicon name="plus" v-else />
-  </p>
+    <div v-on="$listeners" v-bind="$attrs">
+      <mdicon name="close" v-if="close" />
+      <mdicon name="plus" v-else />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -35,7 +37,7 @@ export default {
       if (this.color === "orange") return " background-orange";
       if (this.color === "primary") return " background-primary";
 
-      return ''
+      return "";
     },
   },
 };
