@@ -109,7 +109,7 @@ button
   text-decoration: none
 
 .text-btn
-  font-weight: 700
+  font-weight: 400
   border-radius: 8px
   @extend .text-btn-md
   text-transform: capitalize

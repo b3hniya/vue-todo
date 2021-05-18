@@ -6,15 +6,15 @@
       <big-tag
         v-for="(tag, index) in tags"
         :key="index"
+        class="ma-2"
         close
         :color="tag.color"
-        class="ma-2"
       >
         {{ tag.name }}
       </big-tag>
       <big-tag class="ma-2" @click="test()"> add new tag </big-tag>
 
-      <add-tags @close="close()" :acti="clicked" />
+      <add-tags @close="close()" :show="clicked" />
     </div>
   </div>
 </template>

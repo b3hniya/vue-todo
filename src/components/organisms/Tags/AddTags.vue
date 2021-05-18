@@ -1,27 +1,25 @@
 <template>
-  <div class="add-tags" :class="acti ? 'activate' : ''">
+  <div class="add-tags" :class="show ? 'showPanel' : ''">
     <card class="pa-2 column">
       <card-item space_between>
         <card-title> Tag name </card-title>
-        <div @click="close()" class="close-btn">
-          <mdicon name="close" />
-        </div>
+
+        <btn @click="close()" icon> <mdicon name="close" /> </btn>
       </card-item>
+
       <input placeholder="Tag name" v-model="name" class="input-text" />
 
-      <card-title class="tag-color-title"> pick tag color </card-title>
-      <div class="colors">
-        <tag class="mx-2" color="blue" size="md" @click="active = 'blue'">
-          <mdicon name="check" v-if="active === 'blue'" />
-        </tag>
-        <tag class="mx-2" color="primary" size="md" @click="active = 'primary'">
-          <mdicon name="check" v-if="active === 'primary'" />
-        </tag>
-        <tag class="mx-2" color="orange" size="md" @click="active = 'orange'">
-          <mdicon name="check" v-if="active === 'orange'" />
-        </tag>
-        <tag class="mx-2" color="purple" size="md" @click="active = 'purple'">
-          <mdicon name="check" v-if="active === 'purple'" />
+      <card-title class="my-2"> pick tag color </card-title>
+
+      <div class="colors-row">
+        <tag
+          v-for="(color, index) in colors"
+          :key="index"
+          class="mx-2"
+          :color="color"
+          @click="selectedColor = color"
+        >
+          <mdicon name="check" v-if="selectedColor === color" />
         </tag>
       </div>
       <btn class="submit-btn" ghost @click="submit()"> Submit </btn>
@@ -33,17 +31,19 @@
 import { mapActions } from "vuex";
 
 export default {
-  props: ["acti"],
+  props: ["show"],
 
   data: () => ({
-    active: "blue",
     name: "",
+    selectedColor: "blue",
+
+    colors: ["blue", "primary", "orange", "purple"],
   }),
   methods: {
     submit() {
       this.addTagsToStore({
         name: this.name,
-        color: this.active,
+        color: this.selectedColor,
       });
 
       this.close();
@@ -65,43 +65,27 @@ export default {
     z-index: 2
     width: 100vw
     height: 100vh
-    display: flex
     position: fixed
-    align-items: center
-    justify-content: center
-    background: rgba(0, 0, 0, 0.3)
+    @include centerize
+    background: rgba(0, 0, 0, 0.5)
     visibility: hidden
     .card
       transition: all 0.1s linear
       transform: translateY(200%)
-    h1
-        color: $main-light
+      .card-title
+        margin-top: 32px
 
-.activate
+.showPanel
   visibility: visible
   .card
         transform: translateY(0%)
         transition: all 0.1s linear
 
-.submit-btn
-    margin-bottom: 4px
-
-.text-btn
-    font-weight: 400
-
-.tag-color-title
-    margin-top: 32px
-
-
-.colors
+.colors-row
     margin-bottom: 32px
     @extend .row
     .tag
       @include main-hover-anim
       span
         color: $main-light
-
-.close-btn
-    span
-      @include main-hover-anim
 </style>
