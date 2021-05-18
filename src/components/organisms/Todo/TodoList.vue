@@ -3,10 +3,10 @@
     <component-title> Todos </component-title>
 
     <div class="todo-list">
-      <card class="my-2 row" v-for="(i, index) in 5" :key="index">
+      <card class="my-2 row" v-for="(todo, index) in todos" :key="index">
         <card-item space_between class="mx-2">
           <card-title>
-            test1
+            {{ todo.name }}
           </card-title>
           <tag />
         </card-item>
@@ -16,7 +16,12 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState(["todos"]),
+  },
+};
 </script>
 
 <style lang="sass" scoped>
