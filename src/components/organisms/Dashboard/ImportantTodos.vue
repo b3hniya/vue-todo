@@ -1,18 +1,16 @@
 <template>
   <div class="important-tasks-wrapper">
-    <component-title> Important task </component-title>
+    <component-title> Important todos </component-title>
     <div class="important-tasks">
-      <card v-for="(i, index) in 3" :key="index">
+      <card v-for="(task, index) in importantTasks" :key="index">
         <card-item space_between>
           <card-title>
-            test1
+            {{ task.name }}
           </card-title>
           <tag />
         </card-item>
         <card-text>
-          Lorem ipsum dolor sit amet consectetur adipi sicing elit. Sed eos
-          fugit mollitia digni ssimos prov ident volu ptates facilis inventore
-          beatae a,
+          {{ task.description }}
         </card-text>
       </card>
     </div>
@@ -20,7 +18,11 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+
+export default {
+  computed: mapGetters({ importantTasks: "getImportantTodos" }),
+};
 </script>
 
 <style lang="sass" scoped>
