@@ -111,12 +111,20 @@ export default new Vuex.Store({
     ADD_NEW_TAG(state, tag) {
       state.tags.splice(0, 0, tag);
     },
+
+    ADD_NEW_TODO(state, todo){
+      state.todos.splice(0, 0, todo); 
+    }
   },
 
   actions: {
     DISPATCH_ADDING_NEW_TAG({ commit }, tag) {
       commit("ADD_NEW_TAG", tag);
     },
+
+    DISPATCH_ADDING_NEW_TODO ({commit}, todo){ 
+      commit("ADD_NEW_TODO", todo);
+    }
   },
   modules: {},
 });

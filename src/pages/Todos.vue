@@ -2,7 +2,7 @@
   <div class="page" v-on:scroll="updateScroll">
     <appbar :scrollPosition="scrollPosition">To-Do</appbar>
 
-    <new-todo class="new-todo-card" />
+    <add-todo class="new-todo-card" />
 
     <todo-list class="" />
   </div>
