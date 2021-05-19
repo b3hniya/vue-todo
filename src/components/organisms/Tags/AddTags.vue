@@ -1,5 +1,5 @@
 <template>
-  <div class="add-tags" :class="show ? 'showPanel' : ''">
+  <popup v-on="$listeners" v-bind="$attrs">
     <card class="pa-2 column">
       <card-item space_between>
         <card-title> Tag name </card-title>
@@ -24,15 +24,13 @@
       </div>
       <btn class="submit-btn" ghost @click="submit()"> Submit </btn>
     </card>
-  </div>
+  </popup>
 </template>
 
 <script>
 import { mapActions } from "vuex";
 
 export default {
-  props: ["show"],
-
   data: () => ({
     name: "",
     selectedColor: "blue",
@@ -59,27 +57,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.add-tags
-    top: 0
-    left: 0
-    z-index: 2
-    width: 100vw
-    height: 100vh
-    position: fixed
-    @include centerize
-    background: rgba(0, 0, 0, 0.5)
-    visibility: hidden
-    .card
-      transition: all 0.1s linear
-      transform: translateY(200%)
-      .card-title
-        margin-top: 32px
-
-.showPanel
-  visibility: visible
-  .card
-        transform: translateY(0%)
-        transition: all 0.1s linear
 
 .colors-row
     margin-bottom: 32px
