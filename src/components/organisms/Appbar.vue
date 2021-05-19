@@ -15,7 +15,7 @@ export default {
 
 <style lang="sass" scoped>
 .page-title
-  z-index: 0
+  z-index: 1
   width: 100%
   position: fixed
   font-weight: 900
